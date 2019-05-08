@@ -1,0 +1,371 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\MicroPCR.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""l.KOR\\afxres.rc""      // 표준 구성 요소입니다.\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\MicroPCR.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_MICROPCR_DIALOG DIALOGEX 0, 0, 671, 439
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "MicroPCR"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_DEVICE_STATUS,75,15,54,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Chip Temper",IDC_STATIC,3,69,57,124
+    GROUPBOX        "PCR Protocol",IDC_STATIC,63,70,171,123
+    EDITTEXT        IDC_EDIT_CHAMBER_TEMP,12,81,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    CONTROL         "",IDC_PROGRESS_CHAMBER_TEMP,"msctls_progress32",PBS_SMOOTH | PBS_VERTICAL | WS_BORDER,25,99,13,88,WS_EX_DLGMODALFRAME
+    RTEXT           "100",IDC_STATIC,9,99,13,8
+    RTEXT           "0",IDC_STATIC,14,179,8,8
+    PUSHBUTTON      "PID 열기",IDC_BUTTON_CONSTANTS,283,10,44,17,NOT WS_TABSTOP
+    PUSHBUTTON      "그래프 열기",IDC_BUTTON_GRAPHVIEW,283,29,44,17,NOT WS_TABSTOP
+    CONTROL         "",IDC_LIST_PCR_PROTOCOL,"SysListView32",LVS_REPORT | WS_BORDER | WS_TABSTOP,69,81,159,90,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "PCR Start",IDC_BUTTON_PCR_START,69,174,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "PCR Open",IDC_BUTTON_PCR_OPEN,124,174,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "",IDC_BUTTON_PCR_RECORD,178,174,50,14,BS_BITMAP | NOT WS_TABSTOP
+    GROUPBOX        "PCR Constants",IDC_STATIC,330,3,331,190
+    RTEXT           "Maximum actions :",IDC_STATIC,339,17,107,8
+    RTEXT           "Temperature coverage time out :",IDC_STATIC,339,34,107,8
+    RTEXT           "Target temperature arrival delta :",IDC_STATIC,339,51,107,8
+    EDITTEXT        IDC_EDIT_MAX_ACTIONS,450,15,40,13,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_TIME_OUT,450,32,40,13,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_ARRIVAL_DELTA,450,49,40,13,ES_CENTER | ES_AUTOHSCROLL
+    CONTROL         "Custom1",IDC_CUSTOM_PID_TABLE,"MFCGridCtrl",WS_TABSTOP,336,99,320,72
+    PUSHBUTTON      "Save Changes",IDC_BUTTON_CONSTANTS_APPLY,580,81,76,14
+    GROUPBOX        "Device Information",IDC_STATIC,3,3,231,63
+    RTEXT           "Left Protocol Time :",IDC_STATIC,9,34,64,8
+    EDITTEXT        IDC_EDIT_LEFT_PROTOCOL_TIME,75,32,54,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    RTEXT           "Elapsed Time :",IDC_STATIC,9,51,64,8
+    EDITTEXT        IDC_EDIT_ELAPSED_TIME,75,49,54,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    RTEXT           "Graph Y axis min :",IDC_STATIC,546,34,65,8
+    RTEXT           "Graph Y axis max :",IDC_STATIC,546,51,65,8
+    EDITTEXT        IDC_EDIT_GRAPH_Y_MIN,616,32,40,13,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_Y_MAX,616,49,40,13,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "FAN ON",IDC_BUTTON_FAN_CONTROL,238,29,43,17,NOT WS_TABSTOP
+    RTEXT           "Integral max :",IDC_STATIC,546,68,65,8
+    EDITTEXT        IDC_EDIT_INTEGRAL_MAX,616,65,40,13,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "P :",IDC_STATIC,135,17,9,8
+    RTEXT           "I  :",IDC_STATIC,135,34,9,8
+    RTEXT           "D :",IDC_STATIC,135,51,9,8
+    EDITTEXT        IDC_EDIT_CURRENT_P,146,15,29,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CURRENT_I,146,32,29,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CURRENT_D,146,49,29,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "PID Manager",IDC_BUTTON_ENTER_PID_MANAGER,336,174,61,14
+    RTEXT           "Loaded PID : ",IDC_STATIC,542,177,44,8
+    EDITTEXT        IDC_EDIT_LOADED_PID,588,174,68,14,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "LED ON",IDC_BUTTON_LED_CONTROL,237,10,44,17,NOT WS_TABSTOP
+    CONTROL         "Graph",IDC_CHECK_TEMP_GRAPH,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,405,174,61,14
+    RTEXT           "Compensation :",IDC_STATIC,388,84,58,8
+    EDITTEXT        IDC_EDIT_COMPENSATION,450,81,40,13,ES_CENTER | ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PHOTODIODE,181,49,48,13,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY
+    CTEXT           "Photodiode",IDC_STATIC,186,40,37,8
+    RTEXT           "WG :",IDC_STATIC,243,103,27,8
+    EDITTEXT        IDC_EDIT_WG_PWM,274,101,44,14,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "Status :",IDC_STATIC,9,17,64,8
+    GROUPBOX        "LED PWM (0~255)",IDC_STATIC,237,70,90,123
+    RTEXT           "Red :",IDC_STATIC,243,120,27,8
+    EDITTEXT        IDC_EDIT_RED_PWM,274,118,44,14,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "Green :",IDC_STATIC,243,138,27,8
+    EDITTEXT        IDC_EDIT_GREEN_PWM,274,136,44,14,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "Blue :",IDC_STATIC,243,155,27,8
+    EDITTEXT        IDC_EDIT_BLUE_PWM,274,153,44,14,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "Save Changes",IDC_BUTTON_PWM_APPLY,243,171,78,17
+    CONTROL         "Locking",IDC_CHECK_PWM_UI_HOLD,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | WS_TABSTOP,243,83,78,14
+    RTEXT           "Graph X axis val :",IDC_STATIC,546,17,65,8
+    EDITTEXT        IDC_EDIT_GRAPH_X_VAL,616,15,40,13,ES_CENTER | ES_AUTOHSCROLL
+    RTEXT           "Sensor capture temperature :",IDC_STATIC,339,68,107,8
+    EDITTEXT        IDC_EDIT_CAPTURE_TEMPERATURE,450,65,40,13,ES_CENTER | ES_AUTOHSCROLL
+    PUSHBUTTON      "Log Save",IDC_BUTTON_LOGSAVE,238,48,43,17
+    PUSHBUTTON      "Device",IDC_BUTTON_DEVICE,283,48,44,17
+END
+
+IDD_PROGRESS_DIALOG DIALOGEX 0, 0, 194, 84
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "PCR Protocol Transmitting...",IDC_STATIC_PROGRESS,26,26,145,8
+    CONTROL         "",IDC_PROGRESS_PROTOCOL,"msctls_progress32",WS_BORDER,20,44,153,14
+END
+
+IDD_DIALOG_PID_MANAGER DIALOGEX 0, 0, 454, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PID Manager"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "PID Parameter List",IDC_STATIC,7,7,149,154
+    GROUPBOX        "Selected PID Parameter",IDC_STATIC,165,7,282,187
+    CONTROL         "Custom1",IDC_CUSTOM_PID_TABLE2,"MFCGridCtrl",WS_TABSTOP,174,20,263,164
+    PUSHBUTTON      "New",IDC_BUTTON_PID_NEW,15,169,38,16,NOT WS_TABSTOP
+    PUSHBUTTON      "Select",IDC_BUTTON_PID_SELECT,63,169,38,16,NOT WS_TABSTOP
+    PUSHBUTTON      "Delete",IDC_BUTTON_PID_DELETE,111,169,38,16,NOT WS_TABSTOP
+    LISTBOX         IDC_LIST_PID,15,19,131,135,LBS_NOINTEGRALHEIGHT | WS_VSCROLL
+END
+
+IDD_DIALOG_PID_CREATE DIALOGEX 0, 0, 296, 291
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "PID Create Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    GROUPBOX        "PID Parameter Setting",IDC_STATIC,7,7,144,132
+    LTEXT           "Start Temperature",IDC_STATIC,15,23,60,8
+    EDITTEXT        IDC_EDIT_PID_START_TEMP,87,21,48,14,ES_AUTOHSCROLL
+    LTEXT           "Target Temperature",IDC_STATIC,15,42,66,8
+    EDITTEXT        IDC_EDIT_PID_TARGET_TEMP2,87,40,48,14,ES_AUTOHSCROLL
+    LTEXT           "P Value",IDC_STATIC,15,61,24,8
+    EDITTEXT        IDC_EDIT_PID_P,87,59,48,14,ES_AUTOHSCROLL
+    LTEXT           "D Value",IDC_STATIC,15,80,25,8
+    EDITTEXT        IDC_EDIT_PID_D,87,78,48,14,ES_AUTOHSCROLL
+    LTEXT           "I Value",IDC_STATIC,15,99,23,8
+    EDITTEXT        IDC_EDIT_PID_I,87,97,48,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Add",IDC_BUTTON_PID_CREATE_ADD,35,118,30,17
+    PUSHBUTTON      "Complete",IDC_BUTTON_PID_CREATE_COMPLETE,80,118,42,17
+    LTEXT           "* 이미 저장된 PID 를 변경하려면\n  셀을 직접 선택하여 수정하세요.",IDC_STATIC,162,81,122,20
+    GROUPBOX        "PID Parameter Removal",IDC_STATIC,158,7,131,55
+    LTEXT           "* PID 값을 다 저장하였으면\n  Complete 를 눌러주세요.",IDC_STATIC,162,107,122,20
+    COMBOBOX        IDC_COMBO_PID_REMOVAL,171,22,105,30,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Remove",IDC_BUTTON_PID_CREATE_REMOVAL,206,39,35,17
+    GROUPBOX        "PID Parameter List",IDC_STATIC,7,142,282,142
+    CONTROL         "Custom1",IDC_CUSTOM_PID_TABLE3,"MFCGridCtrl",WS_TABSTOP,14,154,269,123
+END
+
+IDD_DIALOG_SAVE DIALOGEX 0, 0, 177, 92
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Save PID"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "확인",IDOK,35,62,50,14,NOT WS_TABSTOP
+    PUSHBUTTON      "취소",IDCANCEL,89,62,50,14,NOT WS_TABSTOP
+    CTEXT           "저장할 PID 이름을 입력하세요.",IDC_STATIC_SAVE_LABEL,23,21,127,8
+    EDITTEXT        IDC_EDIT_SAVE_LABEL,23,39,128,14,ES_AUTOHSCROLL
+END
+
+IDD_DIALOG_TEMP_GRAPH DIALOGEX 0, 0, 361, 227
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+EXSTYLE WS_EX_TOPMOST
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_DEVICE_MANAGER DIALOGEX 0, 0, 103, 129
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Device"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_DEVICE,"SysListView32",LVS_LIST | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,7,89,98
+    PUSHBUTTON      "Cancel",IDC_BUTTON_CANCEL,7,108,89,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "MicroPCR.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "MicroPCR.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_MICROPCR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 664
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 432
+    END
+
+    IDD_PROGRESS_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 187
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 77
+    END
+
+    IDD_DIALOG_PID_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 447
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DIALOG_PID_CREATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 289
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 284
+    END
+
+    IDD_DIALOG_SAVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 170
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 85
+    END
+
+    IDD_DIALOG_TEMP_GRAPH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 354
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 220
+    END
+
+    IDD_DIALOG_DEVICE_MANAGER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 96
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 122
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_SCALE        BITMAP                  "res\\bitmap1.bmp"
+IDB_BITMAP_REC_NOT_WORKING BITMAP                  "res\\rec_not_work.bmp"
+IDB_BITMAP_REC_WORKING  BITMAP                  "res\\rec_work.bmp"
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\MicroPCR.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "l.KOR\afxres.rc"      // 표준 구성 요소입니다.
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
